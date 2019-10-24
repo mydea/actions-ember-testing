@@ -17,5 +17,7 @@ jobs:
           node-version: '12'
       - name: Verify node & yarn versions
         run: node -v && yarn -v
+      - name: Verify problem matchers
+        run: yarn debug-problem-matchers
 
 
