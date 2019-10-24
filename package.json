@@ -1,6 +1,6 @@
 {
   "name": "actions-ember-testing",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Test your Ember app with Github Actions",
   "main": "index.js",
   "repository": "git@github.com:mydea/actions-ember-testing.git",
@@ -11,5 +11,6 @@
     "@actions/core": "^1.2.0",
     "@actions/exec": "^1.0.1",
     "@actions/tool-cache": "^1.1.2"
-  }
+  },
+  "devDependencies": {}
 }
