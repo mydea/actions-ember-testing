@@ -4,13 +4,8 @@
       "owner": "testem",
       "pattern": [
         {
-          "regexp": "^([^\\s].*)$",
-          "file": 1
-        },
-        {
           "regexp": "^not ok \\d+ \\w+ \\d+.\\d+ - \\[\\d+ ms\\] - (.*)$",
-          "message": 1,
-          "loop": true
+          "message": 1
         }
       ]
     }
