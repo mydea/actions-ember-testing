@@ -9,17 +9,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Install Volta
-        run: |
-          curl https://get.volta.sh | bash
-          echo 'export VOLTA_HOME=$HOME/.volta' >> ~/.bashrc
-          echo 'export PATH=$VOLTA_HOME:$PATH' >> ~/.bashrc
-      - name: Debug
-        run: cat ~/.bashrc
-      - name: Debug 2
-        run: cat /home/runner/.bashrc
-      - name: Debug path
-        run: echo $PATH
-      - name: Debug 3
-        run: volta -v
+      - name: actions-ember-testing
+        uses: ./ # Uses an action in the root directory
+        id: actions-ember-testing
+        with:
+          yarn-version: '1.17'
+          node-version: '12'
+      - name: Verify node & yarn versions
+        run: node -v && yarn -v
+
 
