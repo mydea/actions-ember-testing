@@ -15,5 +15,11 @@ jobs:
           echo 'export VOLTA_HOME=$HOME/.volta' >> ~/.bashrc
           echo 'export PATH=$VOLTA_HOME:$PATH' >> ~/.bashrc
       - name: Debug
-        run: volta -v && node -v
+        run: cat ~/.bashrc
+      - name: Debug 2
+        run: cat /home/runner/.bashrc
+      - name: Debug path
+        run: echo $PATH
+      - name: Debug 3
+        run: volta -v
 
