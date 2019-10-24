@@ -1,9 +1,16 @@
 # actions-ember-testing
 
-Sets up Node, Yarn, as well as problem matchers for ember tests to get a nicer output for errors.
+Sets up Node, Yarn, as well as problem matchers for Ember tests to get a nicer output for errors.
 
-It uses [Volta](https://volta.sh/) to install Node & Yarn. 
-If you have custom Volta dependencies defined, it will use them as usual.
+## What does it do
+
+* Installs Node.js (10.x by default, configurable)
+* Installs Yarn (latest by default, configurable)
+* Setup problem matchers for nicer error output for:
+  * eslint
+  * typescript
+  * testem
+  * template-lint
 
 ## Example usage
 
@@ -28,8 +35,12 @@ jobs:
       run: yarn lint:js
     - name: Lint HBS
       run: yarn lint:hbs
-
 ```
+
+## How does it work
+
+It uses [Volta](https://volta.sh/) to install Node & Yarn. 
+If you have custom Volta dependencies defined, it will use them as usual.
 
 ## Inputs
 
