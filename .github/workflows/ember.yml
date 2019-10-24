@@ -1,0 +1,19 @@
+name: Ember CI
+
+on: [push]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Volta
+        run: |
+          curl https://get.volta.sh | bash
+          echo 'export VOLTA_HOME=$HOME/.volta' >> ~/.bashrc
+          echo 'export PATH=$VOLTA_HOME:$PATH' >> ~/.bashrc
+      - name: Debug
+        run: volta -v && node -v
+
