@@ -29,6 +29,7 @@ async function run() {
         // Add problem matchers for nice output of eslint & tsc errors
         const matchersPath = path.join(__dirname, '.github');
         console.log(`##[add-matcher]${path.join(matchersPath, 'tsc.json')}`);
+        console.log(`##[add-matcher]${path.join(matchersPath, 'testem.json')}`);
         console.log(
             `##[add-matcher]${path.join(matchersPath, 'eslint-stylish.json')}`
         );
