@@ -1,6 +1,8 @@
 name: 'Setup for Ember tests'
 description: 'Setup a Node.js environment and prepare it to run Ember tests'
 author: 'Francesco Novy'
+icon: 'package'
+color: 'blue'
 inputs:
   node-version:
     description: 'Version of Node to use'
