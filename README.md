@@ -10,7 +10,8 @@ Sets up Node, Yarn, as well as problem matchers for Ember tests to get a nicer o
   * eslint
   * typescript
   * testem
-  * template-lint
+  
+Note: `ember-template-lint` adds its own matchers, so no need to do anything more for it.
 
 ## Example usage
 
