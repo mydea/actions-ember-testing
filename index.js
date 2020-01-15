@@ -16,15 +16,15 @@ async function run() {
 
         // Install Node & Yarn
         if (nodeVersion) {
-            await exec(`/home/runner/.volta/volta install node@${nodeVersion}`);
+            await exec(`$HOME/.volta/volta install node@${nodeVersion}`);
         }
 
         if (yarnVersion) {
-            await exec(`/home/runner/.volta/volta install yarn@${yarnVersion}`);
+            await exec(`$HOME/.volta/volta install yarn@${yarnVersion}`);
         }
 
         // Add Volta bins to path
-        console.log(`##[add-path]/home/runner/.volta/bin`);
+        console.log(`##[add-path]$HOME/.volta/bin`);
 
         // Add problem matchers for nice output of eslint & tsc errors
         const matchersPath = path.join(__dirname, '.github');
