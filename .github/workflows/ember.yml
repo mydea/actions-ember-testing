@@ -19,5 +19,3 @@ jobs:
         run: node -v && yarn -v
       - name: Verify problem matchers
         run: yarn debug-problem-matchers
-
-
