@@ -16,5 +16,3 @@ jobs:
         uses: ./
       - name: Verify problem matchers
         run: yarn debug-problem-matchers
-
-
