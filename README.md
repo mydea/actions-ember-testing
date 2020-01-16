@@ -1,11 +1,9 @@
 # actions-ember-testing
 
-Sets up Node, Yarn, as well as problem matchers for Ember tests to get a nicer output for errors.
+Sets up problem matchers for Ember tests to get a nicer output for errors.
 
 ## What does it do
 
-* Installs Node.js (10.x by default, configurable)
-* Installs Yarn (latest by default, configurable)
 * Setup problem matchers for nicer error output for:
   * eslint
   * typescript
@@ -27,7 +25,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: mydea/actions-ember-testing@v1
+    - uses: rwjblue/setup-volta@v1
+    - uses: mydea/actions-ember-testing@v2
     - name: Install dependencies
       run: yarn install
     - name: Run tests
@@ -38,17 +37,7 @@ jobs:
       run: yarn lint:hbs
 ```
 
-## How does it work
+## Note on updating from v1
 
-It uses [Volta](https://volta.sh/) to install Node & Yarn. 
-If you have custom Volta dependencies defined, it will use them as usual.
-
-## Inputs
-
-### `node-version`
-
-The node version to use. Defaults to `'10'`. Set to `''` to avoid installing it.
-
-### `yarn-version`
-
-The yarn version to use. Defaults to `'latest'`. Set to `''`  to avoid installing it.
+In v1, this also installed Volta, Node and Yarn for you. 
+In v2, this was dropped in favor of using [rwjblue/setup-volta](https://github.com/rwjblue/setup-volta).

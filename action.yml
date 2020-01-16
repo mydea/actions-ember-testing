@@ -4,13 +4,6 @@ author: 'Francesco Novy'
 branding:
   icon: 'package'
   color: 'blue'
-inputs:
-  node-version:
-    description: 'Version of Node to use'
-    default: '10'
-  yarn-version:
-    description: 'Version of Yarn to use'
-    default: 'latest'
 runs:
   using: 'node12'
   main: 'index.js'
