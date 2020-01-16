@@ -37,6 +37,11 @@ jobs:
       run: yarn lint:hbs
 ```
 
+## Browser timeout
+
+If your tests sometimes fail with the message ` Error: Browser failed to connect within 30s. testem.js not loaded?`,
+you can extend this timeout in your testem.js by adding `browser_start_timeout: 60`.
+
 ## Note on updating from v1
 
 In v1, this also installed Volta, Node and Yarn for you. 
